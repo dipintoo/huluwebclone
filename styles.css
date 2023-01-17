@@ -1,0 +1,231 @@
+/* Font ----------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+/* Root ----------------------------------------------- */
+
+:root {
+  /* Color */
+
+  --primary-color: #00ed82;
+  --primary-hover: #00ed33;
+  --text-primary: #fff;
+  --text-light: #bec0c2;
+  --text-dark: #586174;
+  --background-light: #e8eaed;
+  --background-dark: #0b0c0f;
+  --background-gray: #272c34;
+  --background-hover: #586174;
+  --header-fill: rgba(0, 0, 0, 0.06);
+  --header-box-shadow: inset 0 4rem 12rem black;
+  --header-box-shadow1: inset 6rem 6rem 24rem rgba(0, 0, 0, 0.4), inset -6rem -6rem 24rem rgba(0, 0, 0, 0.4);
+  --switch-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.257);
+}
+
+.gray {
+  color: gray;
+}
+
+/* Box Sizing --------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Element  ----------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Pseudo Element  ---------------------------------- */
+
+::after,
+.cover-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Tag Preset --------------------------------------- */
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  background: var(--background-dark);
+  user-select: none;
+  background-color: var(--background-dark);
+  color: white;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: 1.2;
+}
+h2 {
+  font-size: clamp(0.8rem, 4vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 28rem;
+}
+h3 {
+  font-size: clamp(0.4rem, 2.9vw, 0.8rem);
+  color: var(--primary-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
+a,
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-light);
+}
+p {
+  line-height: 1.6;
+}
+img {
+  width: 100%;
+}
+header {
+  min-height: 96vh;
+}
+section {
+  overflow: hidden;
+  min-height: 100vh;
+  z-index: 4;
+}
+
+/* Text Styling ------------------------------------- */
+
+.text-center {
+  text-align: center;
+}
+.text-lg {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+.text-md {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  max-width: 42rem;
+}
+.text-sm {
+  font-size: clamp(0.2rem, 2.1vw, 0.7rem);
+  color: var(--background-light);
+}
+.text-xs {
+  font-size: 0.62rem;
+  color: var(--text-light);
+}
+
+/* Underline */
+
+.text-underline {
+  cursor: pointer;
+  color: white;
+  border-bottom: 1px solid var(--text-light);
+}
+.text-underline:hover {
+  border-color: white;
+}
+.text-button {
+  font-size: 1rem;
+}
+.text-detail {
+  font-size: 0.62rem;
+}
+
+/* Table */
+
+.text-thead-1 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.text-thead-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-block: 0.2rem 0.6rem;
+}
+.text-tbody {
+  font-size: 0.86rem;
+  font-weight: 300;
+  color: white;
+}
+.text-tsmall {
+  font-size: 0.62rem;
+  font-weight: 300;
+  color: var(--text-light);
+  margin-top: 1.4rem;
+}
+
+/* Footer */
+
+.text-links-head,
+.text-links-head-hide {
+  font-size: 0.7rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.text-links-head-hide {
+  color: transparent;
+}
+.text-links {
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--text-dark);
+}
+.text-links:hover {
+  color: black;
+}
+
+/* Spacing ----------------------------------------- */
+
+.margin-block {
+  margin-block: 0.6rem;
+}
+.margin-block-1 {
+  margin-block: 1rem;
+}
+.margin-block-2 {
+  margin-block: 1.4rem;
+}
+
+.margin-inline {
+  margin-inline: auto;
+}
+
+.margin-top {
+  margin-top: 0.6rem;
+}
+.margin-top-1 {
+  margin-top: 1rem;
+}
+.margin-top-2 {
+  margin-top: 1.4rem;
+}
+
+.margin-bottom {
+  margin-bottom: 0.6rem;
+}
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+.margin-bottom-2 {
+  margin-bottom: 1.4rem;
+}

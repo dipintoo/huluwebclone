@@ -1,0 +1,230 @@
+/* Button ------------------------------------------ */
+
+button,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  border-radius: 0.3em;
+  padding: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--background-dark);
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.btn-dropdown {
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.6rem;
+  background-color: var(--background-gray);
+}
+.btn-dropdown::after {
+  display: grid;
+  align-items: center;
+  content: "\f0c9";
+  font-family: "Font Awesome 6 Free";
+  color: white;
+}
+.btn-dropdown:hover {
+  background-color: var(--background-hover);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  max-width: 36rem;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-price {
+  background-color: var(--background-light);
+  width: 90%;
+}
+.btn-price:hover {
+  opacity: 0.8;
+}
+
+.btn-login {
+  color: var(--text-links);
+  margin-bottom: 0.4rem;
+}
+.btn-login:hover {
+  background: var(--background-hover);
+}
+
+.btn-popular {
+  font-size: 0.6em;
+  background-color: var(--primary-color);
+  border-radius: 10em;
+  max-width: 8rem;
+  margin-bottom: 0.6rem;
+}
+
+.btn-hide {
+  visibility: hidden;
+}
+
+/* Logo ------------------------------------------ */
+
+.logo {
+  width: 5rem;
+}
+
+/* Nav ------------------------------------------- */
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 4%;
+  z-index: 2;
+}
+.nav-1 {
+  justify-content: space-between;
+  position: absolute;
+}
+.nav-2 {
+  justify-content: space-between;
+}
+
+/* Dropdown --------------------------------------- */
+
+.dropdown {
+  position: relative;
+}
+.dropdown-container {
+  position: absolute;
+  width: 16rem;
+  margin-top: 1rem;
+  display: grid;
+  text-align: center;
+  padding: 0.6rem;
+  background-color: var(--background-gray);
+  right: 0;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all ease-in 0.1s;
+}
+.dropdown button:focus + .dropdown-container {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (320px <= width <= 890px) {
+  .dropdown-container {
+    width: 50vw;
+  }
+}
+@media (320px <= width <= 480px) {
+  .dropdown-container {
+    width: 90vw;
+  }
+}
+
+/* Arrrow Animation --------------------------------- */
+
+.links-ani {
+  animation: ani ease-in-out 3s infinite;
+}
+@keyframes ani {
+  0%,
+  50%,
+  100% {
+    transform: translateY(1.2rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+/* Switch ------------------------------------------- */
+
+/* Plan */
+
+.plan {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  position: relative;
+  top: 0.32rem;
+}
+.plan p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plan-left {
+  width: 1.9rem;
+}
+.plan-left img {
+  position: relative;
+  bottom: 0.4rem;
+  left: 0.09rem;
+}
+.plan-right {
+  width: 9rem;
+  text-align: start;
+}
+
+/* Toggle */
+
+:root {
+  --width: 60px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--width) / 2);
+}
+
+.toggle-input {
+  display: none;
+}
+.toggle-label {
+  cursor: pointer;
+  position: relative;
+  top: -2.4rem;
+  left: -3.6rem;
+  display: flex;
+  padding: 18px;
+  background: gray;
+  color: transparent;
+  border-radius: var(--border-radius);
+  height: var(--height);
+  width: var(--width);
+  transition: background ease 0.3s;
+}
+.toggle-label::after {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  background: white;
+  height: var(--height);
+  width: var(--height);
+  border-radius: var(--border-radius);
+  transition: ease 0.3s;
+  box-shadow: var(--switch-box-shadow);
+}
+
+#switch:checked + .toggle-label {
+  background: var(--primary-color);
+  transition: background ease 0.3s;
+}
+#switch:checked + .toggle-label::after {
+  transform: translate(-10%, -50%);
+  transition: ease 0.3s;
+}
